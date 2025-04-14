@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+  <head>
+    <title>M1.306 - Plataformas de publicación y distribución - PEC 2 - Ejercicio 4</title>
+	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/pec2.css">
+  </head>
+  <body>
+	<div class="navbar">
+		<a href="../index.html">Inicio</a>
+		<a href="ejercicio1.html">Ejercicio 1</a>
+		<a href="ejercicio2.html">Ejercicio 2</a>
+		<a href="ejercicio3.html">Ejercicio 3</a>
+		<a class="selected" href="">Ejercicio 4</a>
+		<a href="ejercicio5.html">Ejercicio 5</a>
+		<a href="bibliografia.html">Bibliografía</a>
+	</div>
+    <div class="content">
+		<h1>Ejercicio 4: Codificación Blu Ray y codificación 4K</h1>
+		<h2>Tarea 4.1</h2>
+		<p><b>HEVC</b> significa <b>High Efficiency Video Coding</b> Codificación de vídeo de alta eficiencia.</p>
+		<p>Comparando con H.264 MPEG-4 AVC,	<b>H.265/HEVC mejora</b> tanto
+			la <b>calidad</b> como la <b>tasa de datos</b>.
+		</p>
+		<p>H.265 ofrece la
+			<b>mitad de tasa de bits</b> y necesita <b>menos
+			ancho de banda</b>, pudiendo realizar la transmisión de audio y vídeo de alta
+			definición de 720P a 1-2 Mbps.
+		</p>
+		<p>Ofrece
+			<b>mejoras</b> en la <b>resolución</b> de los videos,
+			pudiendo generar resoluciones de 4096 × 2160 px en 4K y 8192 × 4320
+			px en 8K (UHDTV)&nbsp;frente a 2048 x 2048
+			px de H.264.
+		</p>
+		<p>La codificación H.265
+		<b>evoluciona los algoritmos de
+			predicción y segmentación</b>, lo que permite mejorar el movimiento de las
+			imágenes. Por un lado, en vez de utilizar <b>macrobloque</b> fijos< span> de 16x16
+			px como H.264, H.265 incorpora
+			<b>Unidades de Arbol de Codificación (CTU - Coding Tree Unit)</b> 
+			con tamaños variables desde 8x8 hasta 64x64 px. Por otro lado, el
+			<b>modo de predicción intra</b> es <b>de 33 direcciones</b>, frente a 8
+			direcciones de H.264.
+		</p>
+		
+		<p>La
+			<b>arquitectura</b> de codificación similar en ambos. Sin
+			embargo, en H.265 la arquitectura se divide en <b>tres bloques principales</b>:
+			Unidad de Codificación (CU), Unidad de Predicción (PU) y Unidad de Conversión
+			(TU).
+		</p>
+		<p>Hay que tener en cuenta que debido a que los
+			<b>algoritmos</b>
+			de predicción, transformación y filtrado son <b>más sofisticados</b>, su <b>complejidad
+			computacional</b> también es <b>mayor</b>.
+		</p>
+		
+		<h2>Tarea 4.2</h2>
+		<p>Los
+		<b>perfiles</b> de H.265 se han ido completando edición tras edición.</p>
+		<p>En la <b>primera edición</b> se incluías estos <b>tres perfile</b>, todos con submuestreo de color 4:2:0: </p>
+		<ul>
+			<li>Main (8 bit)</li>
+			<li>Main 10 (10 bit)</li>
+			<li>Main Still Picture (8 bit).</li>
+		</ul>
+		
+		<p>En la
+			<b>segunda edición</b> se añadieron <b>extensiones</b>
+			de submuestreos de color y profundidad de bits <b>de los perfiles </b>
+			Main y Main Still Picture y se agregaron
+			<b>algunos perfiles nuevos</b> nuevas:
+		</p>
+		<ul>
+			<li>Monochrome,
+				Monochrome 12 y
+				Monochrome 16
+			</li>
+			<li>Main 12</li>
+			<li>Main 4:2:2 10 y
+				Main 4:2:2 12
+			</li>
+			<li>Main 4:4:4,
+				Main 4:4:4 10 y
+				Main 4:4:4 12
+			</li>
+			<li>Main Intra,
+				Main 10 Intra,
+				Main 12 Intra,
+				Main 4:2:2 10 Intra,
+				Main 4:2:2 12 Intra,
+				Main 4:4:4 Intra,
+				Main 4:4:4 10 Intra,
+				Main 4:4:4 12 Intra y
+				Main 4:4:4 16 Intra
+			</li>
+			<li>Main 4:4:4
+				Still Picture y
+				Main 4:4:4 16 Still Picture
+			</li>
+			<li>High Throughput 4:4:4 16 Intra</li>
+			<li>Multiview
+				Main profile 4:2:0 8
+			</li>
+			<li>Scalable Main 4:2:0 8 y Scalable Main 4:2:0 10</li>
+		</ul>
+		
+		<p>En la
+			<b>tercera edición</b>,<b> </b>además de agregar más
+			perfiles y variaciones de Main y High, se añadió el perfil 3D-HEVC:
+		</p>
+		<ul>
+			<li>3D-HEVC</li>
+			<li>Screen-Extended
+				Main,
+				Screen-Extended
+				Main 10,
+				Screen-Extended
+				Main 4:4:4,
+				Screen-Extended
+				Main 4:4:4 10,
+				Screen-Extended High
+				Throughput 4:4:4,
+				Screen-Extended High
+				Throughput 4:4:4 10 y
+				Screen-Extended High
+				Throughput 14
+			</li>
+			<li>Scalable
+				Monochrome,
+				Scalable
+				Monochrome 12,
+				Scalable
+				Monochrome 16 y
+				Scalable
+				Main 4:4:4
+			</li>
+			<li>High Throughput 4:4:4, High
+				Throughput 4:4:4 10 y High
+				Throughput 4:4:4 14
+			</li>
+		</ul>
+		
+		<p>Por otro lado, H.265 especifica <b>17 niveles</b>: 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, 6.3, 7, 7.1, 7.2 y 8.5.</p>
+		<p>En comparando con H.264, H.265 ofrece una
+			<b>variedad más
+			amplía de perfiles</b>, incorporando distintas opciones de submuestreo de color
+			en más perfiles, así como mayor más opciones de profundidad de bits, perfiles
+			Intra, 3D, Screen-Extended, etc. Incorpora también algunos
+			<b>niveles</b> que H.264 no ofrece, como 6.3, 7, 7.1, 7.2 y 8.5.
+		</p>
+		<p>Por todo ello,
+			<b>H.265</b> ofrece <b>mejor eficacia en la
+			compresión</b> y una arquitectura de perfiles y niveles mucho más amplia y <b>adaptable</b>
+			que H.264, permitiendo que se pueda utilizar en una mayor gama de aplicaciones
+			y dispositivos.
+		</p>
+													
+		<h2>Tareas 4.3 y 4.4</h2>
+		<p>(Tarea 4.3) El
+			<b>nivel de codificación</b> se indica en el
+		campo <b>“Nivel de IDC”.<o:p/>
+			</b>
+		</p>
+		<p>(Tarea 4.4) Para
+			<b>H.264</b> se pueden elegir los <b>perfiles</b>
+			<i>baseline</i><i>,
+			main,
+			high, high10, high422
+			</i>y<i> high444</i>. Para <b>H.265</b>,
+			en cambio, los <b>perfiles</b>
+			<i>main</i> y
+			<i>mainstillpicture</i>.
+		</p>
+		
+		<h2>Tareas 4.5 y 4.6</h2>
+		<p><b>Datos <i>asset-02.mp4</i></b>:</p>
+		<ul>
+			<li><b>Tamaño fichero:</b> 27.713.699 B = 221.709.592</li>
+			<li><b>Duración:</b> 10,398 segundos</li>
+			<li><b>Bitrate:</b>221.709.592 b / 10,398 s = 21.322.330 b/s = 21.322 Kb/s</li>
+			<li><b>Bitrate 70%:</b>14.925 Kb/s</li>
+		</ul>
+										
+		<p>Los <b>datos</b> del nuevo vídeo<b> <i>hevc-70.mkv</i></b> son:</p>
+		<ul>
+			<li><b>Tamaño:</b> 1.920 x 1.080 píxeles</li>
+			<li><b>Cuadros/segundo:</b> 30 fps (redondeado)</li>
+			<li><b>Duración:</b> 10,397 segundos</li>
+			<li><b>Tamaño fichero: </b>21.635.045 B</li>
+		</ul>
+						
+		<p>(Tarea 4.5) El
+			<b>factor de compresión</b>
+			<b>respecto al <i>asset-02.mp4</i>
+			</b> es de FC = 27.713.699 B / 21.635.045 B = <b>1,3.</b>
+		</p>
+						
+		<p>(Tarea 4.6) El <b>tamaño</b> total del <b>fichero sin comprimir</b> es:</p>
+		<ul>
+			<li><b>Tamaño de un frame:</b> 1.920 px * 1.080 px * 3 B=6.220.800 B/frame</li>
+			<li><b>Tamaño por segundo: </b>6.220.800 B/frame * 30 frame/s= 186.624.000B/s</li>
+			<li><b>Tamaño total: </b>186.624.000 B/s * 10.397 s = <b>1.940.329.728 B</b></li>
+		</ul>
+					
+		<p>Por lo que el <b>factor de compresión</b> respecto a éste es de 1.940.329.728 B / 21.635.045 B = <b>89,7</b>.</p>
+							
+		<h2>Tarea 4.7</h2>
+		<ul>
+			<li><b>Bitrate 50%:</b> 10.661 Kb/s</li>
+		</ul><![endif]>
+								
+		<p>El <b>tamaño</b> del fichero <b>
+			<i>hevc-40.mkv</i>
+			</b> es de
+			<b>14.002.243 B</b>, por lo que el <b>factor de compresión</b>
+			<b>respecto</b> al <b>
+			<i>asset-02.mp4</i>
+			</b> es de FC = 27.713.699 B / 14.002.243 B = <b>2</b>,
+			y <b>respecto al fichero sin comprimir</b> de 1.940.329.728 B / 14.002.243 B = <b>138,6</b>.		
+		</p>
+					
+		<p>La
+			<b>variación</b> de la compresión entre los dos clips
+			HEVC es <b>importante</b>, el peso del fichero <i>hevc-40.mkv</i> es casi un
+			65% más pequeño que <i>hevc-70.mkv</i>. En cuanto a la <b>calidad visual</b> no
+			se aprecian grandes diferencias respecto al clip original, ni entre ellos.
+		</p>
+		<p>Esto puede ser debido a
+			<b>varias razones</b>. Por un lado,
+			el <b>ojo humano</b> no percibe pequeñas variaciones de la calidad, por lo que
+			los algoritmos aprovechan estas limitaciones para bajar la calidad sin que sea
+			perceptible. Por otro lado, el <b>modo de codificación <i>Tasa de bits media
+			(dos pasadas)</i>
+			</b> realiza una primera pasada para obtener información, y en
+			la segunda pasada efectúa la codificación utilizando dicha información,
+			optimizando la distribución en favor de los bitrates en las secciones más complejas. El modo
+			<b><i>Tasa de bits constante (una pasada)</i>
+			</b>, en cambio, realiza una única pasada en la que la distribución
+			se realiza de manera homogénea. De esta forma, con dos pasadas se obtienen
+			calidades similares aumentando la compresión del clip resultante.
+		</p>
+			
+		<h2>Tareas 4.8 y 4.9</h2>
+		<p>Las <b>estructuras GOP </b>de los<b> videos son:</b></p>
+		<ul>
+			<li><b>hevc-40.mkv:</b> Tiene una estructura
+		totalmente variable. Contiene solo dos fotogramas I, una al inicio y otra hacia
+		el fotograma 250. El resto de los fotogramas intercala P y B, poniendo como
+		mucho tres fotogramas B seguidas.</li>
+			<li><b>hevc-40-gop-30.mkv:</b> El GOP se reinicia
+		cada 30 fotogramas, es decir, cada 30 fotogramas hay un fotograma I. El resto
+		intercala fotogramas P y B igual que en el vídeo <i>hevc-40.mkv</i>.</li>
+			<li><b>hevc-40-gop-10.mkv:</b> En este caso el GOP cada
+		10 fotogramas y el resto intercala fotogramas P y B, pero como mucho un único
+		fotograma B.</li>
+		</ul>
+		
+		<p>Lo cierto es que
+			<b>no he notado ninguna diferencia en la
+			calidad visual</b>. Se podría esperar que los videos <i>hevc-40-gop-30.mkv</i>
+			y <i>hevc-40-gop-10.mkv</i> al tener más fotogramas I, la calidad visual
+			mejoraría, pero no se aprecian diferencias.
+		</p>
+		<p>Del mismo modo, al tener más fotogramas I y menos P y B, especialmente en el vídeo
+			<i>hevc-40-gop-10.mkv</i>, se esperaría que el peso
+			de los vídeos fuera aumentando, pero ha resultado que <b>la compresión ha ido
+			aumentando ligeramente según se reducía el tamaño de GOP </b>(14.002.243 B de <i>hevc-40.mkv
+			</i>frente 13.890.737 B de <i>hevc-40-gop-30.mkv</i>
+			<i>y </i>13.872.186 B de<i>
+			hevc-40-gop-10.mkv</i>). Esto puede ser debido a que al reiniciar el GOP más
+			frecuentemente, se pueden utilizar menos bits en las predicciones de los
+			fotogramas P y B, disminuyendo el peso total del fichero.
+		</p>
+    </div>
+  </body>
+</html>

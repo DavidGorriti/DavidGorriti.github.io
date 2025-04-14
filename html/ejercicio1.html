@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <title>M1.306 - Plataformas de publicación y distribución - PEC 2 - Ejercicio 1</title>
+	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/pec2.css">
+  </head>
+  <body>
+	<div class="navbar">
+		<a href="../index.html">Inicio</a>
+		<a class="selected" href="">Ejercicio 1</a>
+		<a href="ejercicio2.html">Ejercicio 2</a>
+		<a href="ejercicio3.html">Ejercicio 3</a>
+		<a href="ejercicio4.html">Ejercicio 4</a>
+		<a href="ejercicio5.html">Ejercicio 5</a>
+		<a href="bibliografia.html">Bibliografía</a>
+	</div>
+    <div class="content">
+		<h1>Ejercicio 1: Familiarización con la aplicación <i>Avidemux</i>. Contenido estático</h1>
+		
+		<h2>Tareas 1.1, 1.2, 1.3 y 1.4</h2>
+		<p>(Tarea 1.1) La <b>codificación</b> del clip original es <b>H.264</b>. Se trata de una codificación <b>con perdidas</b> 
+			perteneciente la familia de MPEG-4 AVC. Los <b>colores</b> se representan en el <b>espacio YUV</b> con un <b>submuestreo de 4:2:0</b>.
+		</p>
+		
+		<p>(Tarea 1.2) Las <b>características</b> principales del vídeo son:</p>
+		<ul>
+			<li><b>Tamaño:</b> 1.920 x 1.080 píxeles</li>
+			<li><b>Cuadros/segundo:</b> 30 fps(redondeado)</li>
+			<li><b>Duración:</b> 10,732 segundos</li>
+			<li><b>Tamaño fichero:</b> 28.119.911 B</li>
+		</ul>
+		<img width=290 height=385 src="../img/image001.png"/>
+		<p>Para	<b>calcular el tamaño sin comprimir:</b></p>
+		<ul>
+			<li><b>Tamaño de un frame:</b> 1.920 px * 1.080 px * 3 B = 6.220.800 B/frame</li>
+			<li><b>Tamaño por segundo:</b> 6.220.800 B/frame * 30 frame/s = 186.624.000 B/s</li>
+			<li><b>Tamaño total:</b> 186.624.000 B/s * 10.732s = <b>2.002.848.768 B</b></li>
+		</ul>
+		
+		<p>(Tarea 1.3) Para calcular el <b>factor de compresión:</b></p>
+		<ul>
+			<li><b>FC</b> = Tamaño “original” / Tamaño “comprimido” = 2.002.848.768 B / 28.119.911 B = <b>71,2</b></li>		
+		</ul>
+		
+		<p>(Tarea 1.4) La extensión del archivo de vídeo es .mp4, por lo que el <b>contenedor es MPEG-4 Part 14.</b> Coincide 
+			con la tabla de contenedores del apartado 3.3, así como con la compatibilidad
+			entre dicho contenedor y el codec H.264 MPEG-4 AVC.
+		</p>
+		
+		<h2>Tareas 1.5, 1.6, 1.7 y 1.8</h2>
+		<p>(Tarea 1.5) El <b>primer fotograma</b> es de tipo <b>“I” (intracode</span>/fotogramas clave)</b> y el
+			<b>segundo</b> de <b>tipo “P” (predictiva)</b>.
+		</p>
+		<img width=369 height=110 src="../img/image003.png"/>
+		<img width=380 height=123 src="../img/image005.png"/>
+		
+		<p>(Tarea 1.6) En el clip hay <b>11 fotogramas de tipo “I</b>”.
+			Estos fotogramas se comprimen espacialmente y sirven como referencia para
+			el resto de las imágenes del clip. El resto de los fotogramas se calculan
+			mediante una estimación del movimiento existente a partir de dichos fotogramas clave.
+		</p>
+						
+		<p>(Tarea 1.7) La estructura <b>GOP</b> de este clip es <b>N = 30</b> (distancia entre dos fotogramas I) 
+			y <b>M = 1</b> (distancia entre fotograma I y el siguiente fotograma I o P). Es decir, este clip se compone
+			solo de fotogramas I y P, empezando por el primer I y siendo los siguientes 29 fotogramas de tipo P 
+			(corresponde a 1 segundo del clip). No contiene fotogramas B.
+		</p>
+					
+		<p>(Tarea 1.8) Es <b>necesario tener en cuenta</b> la <b>estructura
+			GOP</b> a la hora de editar un vídeo. Como los fotogramas P y B se calculan en
+			base a los I, es importante realizar los cortes de los clips en los fotogramas
+			clave para mantener la integridad visual del resto de clips. Si se realiza un
+			corte en un fotograma que no sea I, al reensamblar habría que recodificar para
+			mantener dicha integridad. 
+		</p>
+		<p>Avidemux (y otros editores), en modo <i>copy</i> (manteniendo la calidad) obliga
+			a marcar en un fotograma I, y si no se hace de esta manera, el programa
+			selecciona el fotograma I más cercano. Si se va a recodificar (y perder
+			calidad), permite realizar el corte en cualquier punto.
+		</p>
+		<p>En los siguientes hilos del foro de	Avidemux, por ejemplo, se discuten estos temas:< p>
+		<ul>
+			<li><a target="_blank" href="https://avidemux.org/smif/index.php?topic=17782.0">https://avidemux.org/smif/index.php?topic=17782.0</a></li>
+			<li><a target="_blank" href="https://avidemux.org/smif/index.php?topic=18144.0">https://avidemux.org/smif/index.php?topic=18144.0</a></li>
+		</ul>
+		
+		<h2>Tarea 1.9</h2>
+		<p><b>Ambas</b> aplicaciones dan información sobre la codificación de vídeo, tamaño de imagen, velocidad media de fotogramas (FPS) y duración total del vídeo, además de información sobre la composición de los
+			frames (espacio de color, submuestreo de croma, profundidad, colores primarios, etc.).
+		</p>
+		<p>De todas formas,	<b>MediaInfo</b></span> ofrece mucha más información con más detallada, como, por ejemplo, información del perfil y el nivel (High@L1), estructura GOP, velocidad de fotogramas mínima y máxima, tamaño concreto de la pista de video (25,5 MiB) y la codificación entrópica (CABAC).
+		</p>
+		<img border=0 width=430 height=310 src="../img/image007.png">
+		<img border=0 width=457 height=906 src="../img/image009.png">
+    </div>
+  </body>
+</html>

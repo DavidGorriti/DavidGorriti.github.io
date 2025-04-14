@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <title>M1.306 - Plataformas de publicación y distribución - PEC 2 - Ejercicio 3</title>
+	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/pec2.css">
+  </head>
+  <body>
+	<div class="navbar">
+		<a href="../index.html">Inicio</a>
+		<a href="ejercicio1.html">Ejercicio 1</a>
+		<a href="ejercicio2.html">Ejercicio 2</a>
+		<a class="selected" href="">Ejercicio 3</a>
+		<a href="ejercicio4.html">Ejercicio 4</a>
+		<a href="ejercicio5.html">Ejercicio 5</a>
+		<a href="bibliografia.html">Bibliografía</a>
+	</div>
+    <div class="content">
+		<h1>Ejercicio 3: Codificación en baja calidad</h1>
+		<h2>Tarea 3.1</h2>
+		<p>Los <b>DVDs</b> aceptan la codificación H.262 MPEG-2	Part 2 y MPEG-1 Part 2.</p>
+		<p>En los <b>Blue Ray</b>, en cambio, se aceptan H.262/MPEG-2 Part 2, H.264 MPEG-4 AVC, VC-1 y H.265 HEVC (este último solo en Ultra HD Blue-Ray).</p>
+
+		<h2>Tarea 3.2</h2>
+		<p>De los dos <b>filtros</b> mencionados, el <b>adecuado</b> es
+			<b>RESTABLECER/REMUESTREAR LOS FPS</b>, ya que esta transformación mantiene la
+			duración del vídeo, que es lo que nos interesa. CAMBIAR LOS FPS altera la
+			duración del video resultante.
+		</p>
+		
+		<h2>Tarea 3.3</h2>
+		<p>El <b>tamaño</b> del fichero <b><i>pec2_dvd.mpg</i></b>
+			obtenido es <b>12.236.800 B, </b>por lo que su <b>factor de compresión</b> es: <b>FC</b>
+			= 1.940.516.352 B / 12.236.800<b> </b>B = <b>158,6. </b>Comparado con el FC 70
+			obtenido en la tarea 2.3, la diferencia es importante, obteniendo un fichero
+			que pesa algo menos que la mitad.
+		</p>
+		
+		<h2>Tareas 3.4, 3.5 y 3.6</h2>
+		<p>(Tarea 3.4) “Número de fotogramas B” indica la cantidad de imágenes bidireccional predictiva B que habrá entre las imágenes I y P, y “Tamaño de GOP” el número total de fotogramas entre dos imágenes I (incluyendo la primera I). Por lo tanto, para obtener una <b>estructura GOP con M=2 y N=8</b>, los valores deben ser “<b>Número de fotogramas B = 1” y “Tamaño del GOP = 8”</b>.
+		</p>
+		<p>(Tarea 3.5) El tamaño del fichero
+			<b>
+				<i>pec2_dvd_m2_n8.mpg</i>
+			</b>
+			es 12.249.088 B, por lo que su factor de compresión es <b>FC</b> = 1.940.516.352
+			B / 12.249.088 B = <b>158,4</b>. 
+		</p>
+		<p>Se puede observar que este factor de compresión es
+		<b>ligeramente
+			inferior</b> al del <i>pec2_dvd.mpg</i>. Esto es debido que la estructura GOP
+			de los dos videos son diferentes. La estructura del video <i>pec2_dvd.mpg</i>
+			es M = 3 y N = 18, lo que indica que tiene menos imágenes I (imágenes de mayor
+			calidad) y más imágenes B (imágenes de menor calidad) que el vídeo <i>pec2_dvd_m2_n8.mpg</i>,
+			haciendo que el fichero resultante pese menos y su factor de compresión sea
+			mayor.
+		</p>
+		<p>(Tarea 3.6) El efecto de la estructura GOP se puede ver más claramente con los siguientes casos.</p>
+		<p>Con el objetivo de obtener los <b>casos más extremos</b> (de menos y mayor compresión), se han generado dos videos:</p>
+		<ul>
+			<li><b>pec2_dvd_m0_n1.mpg: </b>Está totalmente
+				compuesto por fotogramas I, aplicando los valores “<b>Número de fotogramas B = 0”
+				y “Tamaño del GOP = 1”. </b>Su tamaño es de 12.279.808 B y su factor de
+				compresión <b>FC</b> = 1.940.516.352 B / 12.279.808 B = <b>158</b>, siendo el
+				video mayor tamaño y menor factor de compresión de todos los vídeos DVD
+				generados.
+			</li>
+			<li><b>pec2_dvd_m10_n30.mpg: </b>Con los valores “<b>Número
+				de fotogramas B = 9” y “Tamaño del GOP = 30” </b>(el máximo que permite la
+				aplicación)<b> </b>se ha obtenido un vídeo con estructura GOP de M =10 y N =
+				30. Su tamaño es de 12.224.512 B y su factor de compresión <b>FC</b> = 1.940.516.352
+				B / 12.224.512 B = <b>158,7</b>, generando el vídeo de menor peso y mayor
+				factor de compresión.
+			</li>
+		</ul>
+    </div>
+  </body>
+</html>
