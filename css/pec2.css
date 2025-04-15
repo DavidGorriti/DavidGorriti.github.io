@@ -1,5 +1,5 @@
 :root {
-	--blue: #5B9BD5;
+	--blue: #2F75B6;
 	--gray: #575757;
 }
 
@@ -62,7 +62,8 @@ li {
 }
 
 .content {
-	padding: 60px 60px;
+	padding: 60px 60px 30px 60px;
+	min-height: calc(100vh - 146px);
 }
 
 .content h2 {
@@ -80,4 +81,24 @@ li {
 .content ul, .content p {
 	padding-right: 40px;
 	text-align: justify;
+}
+
+/* FOOTER */
+.footer {
+	padding: 10px 20px;
+	font-size: 15px;
+    height: 36px;
+	background-color: var(--blue);
+	color: white;
+	font-weight: bold;
+}
+
+.footer .left {
+	float: left;
+    text-align: left;
+}
+
+.footer .right {
+	float: right;
+    text-align: right;
 }
